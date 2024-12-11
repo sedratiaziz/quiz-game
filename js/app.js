@@ -29,6 +29,7 @@ const init = () => {
   message = "";
   correctChoice = 10;
 };
+init();
 
 /*----------- Event Listeners ----------*/
 const handlePlayerChoice = () => {
