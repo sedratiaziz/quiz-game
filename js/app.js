@@ -143,8 +143,7 @@ let correctChoice;
 
 /*----- Cached Element References  -----*/
 
-//i know this is not correct, i just did it to test if things work! :) 
-const question = document.querySelector(".questionGeoEasy");
+const questions = document.querySelectorAll(".question");
 const choices = document.querySelectorAll(".btn");
 const cardTitles = document.querySelectorAll(".card-title");
 
@@ -158,32 +157,27 @@ init();
 
 
 
-
-
-
-for (let i = 0; i < data.geography.easy.length; i++) {  
+for (let i = 0; i < data.geography.easy.length; i++) {
   
-  question.textContent = data.geography.easy[i].question;  
-    cardTitles.forEach((title, index) => {
-      title.textContent = data.geography.easy[i].options[index];
-    });  
+  questions.forEach((question, index) => {
+    question.textContent = data.geography.easy[index].question;
+  });
+
+  cardTitles.forEach((title, index) => {
+    title.textContent = data.geography.easy[i].options[index];
+  });
 }
-
-
 
 // console.log(data.geography.easy.length)
 
-
-
-
 // const renderQuestions = () => {
-  
+
 //     if (window.location.href === "http://127.0.0.1:5500/assets/categs/geo/easy/geo_easy.html") {
 //       for(let i =0; i< data.geography.easy.length; i++){
-        
+
 //       }
-//     } 
-  
+//     }
+
 // };
 
 // const render = ()=>{
@@ -193,7 +187,6 @@ for (let i = 0; i < data.geography.easy.length; i++) {
 // const handlePlayerChoice = () => {
 //   render();
 
- 
 // };
 
 // choices.forEach((element) => {
@@ -207,6 +200,3 @@ for (let i = 0; i < data.geography.easy.length; i++) {
 // });
 
 //Show the questions and their options based on the href of the page
-
-
-
