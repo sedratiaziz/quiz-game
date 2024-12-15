@@ -8,25 +8,25 @@ const data = {
           "HighText Machine Language",
           "HyperTransfer Machine Language",
         ],
-        answer: 0,
+        answer: "HyperText Markup Language",
       },
       {
         question: "Which company created the iPhone?",
         options: ["Apple", "Microsoft", "Google"],
-        answer: 0,
+        answer: "Apple",
       },
     ],
     medium: [
       {
         question: "Who is known as the father of computer science?",
         options: ["Alan Turing", "Bill Gates", "Charles Babbage"],
-        answer: 0,
+        answer: "Alan Turing",
       },
       {
         question:
           "What is the main programming language used for Android development?",
         options: ["Java", "Swift", "C#"],
-        answer: 0,
+        answer: "Java",
       },
     ],
     hard: [
@@ -37,7 +37,7 @@ const data = {
           "Changes base commits",
           "Deletes branches",
         ],
-        answer: 1,
+        answer: "Changes base commits",
       },
       {
         question: "In computer networks, what does TCP stand for?",
@@ -46,7 +46,7 @@ const data = {
           "Transmission Control Protocol",
           "Telecommunication Protocol",
         ],
-        answer: 1,
+        answer: "Transmission Control Protocol",
       },
     ],
   },
@@ -93,24 +93,24 @@ const data = {
       {
         question: "What is the chemical symbol for water?",
         options: ["O2", "H2O", "CO2"],
-        answer: 1,
+        answer: "H2O",
       },
       {
         question: "What planet is known as the Red Planet?",
         options: ["Mars", "Venus", "Jupiter"],
-        answer: 0,
+        answer: "Mars",
       },
     ],
     medium: [
       {
         question: "What is the powerhouse of the cell?",
         options: ["Nucleus", "Mitochondria", "Ribosome"],
-        answer: 1,
+        answer: "Mitochondria",
       },
       {
         question: "What element has the atomic number 1?",
         options: ["Hydrogen", "Helium", "Carbon"],
-        answer: 0,
+        answer: "Hydrogen",
       },
     ],
     hard: [
@@ -121,18 +121,16 @@ const data = {
           "Entropy of a system always increases",
           "Every action has an equal and opposite reaction",
         ],
-        answer: 1,
+        answer: "Entropy of a system always increases",
       },
       {
         question: "What is the term for the splitting of an atomic nucleus?",
         options: ["Fusion", "Fission", "Radioactivity"],
-        answer: 1,
+        answer: "Fission",
       },
     ],
   },
 };
-
-// Example usage:
 
 /*-------------- Constants -------------*/
 
@@ -140,6 +138,9 @@ const data = {
 let score;
 let message;
 let correctChoice;
+let currentCategory; 
+let currentDifficulty;
+
 
 /*----- Cached Element References  -----*/
 
@@ -155,48 +156,76 @@ const init = () => {
 };
 init();
 
-
-
-for (let i = 0; i < data.geography.easy.length; i++) {
+const renderQuestions = () => {
   
-  questions.forEach((question, index) => {
-    question.textContent = data.geography.easy[index].question;
-  });
+  
+  //Geology Questions
+  if (window.location.href.includes("geo_easy")) {
+    for (let i = 0; i < data.geography.easy.length; i++) {
+      questions.forEach((question, index) => {
+        question.textContent = data.geography.easy[index].question;
+      });
 
-  cardTitles.forEach((title, index) => {
-    title.textContent = data.geography.easy[i].options[index];
-  });
-}
+      cardTitles.forEach((title, index) => {
+        title.textContent = data.geography.easy[i].options[index];
+      });
+    }
 
-// console.log(data.geography.easy.length)
+    currentCategory = "geography"; 
+    currentDifficulty = "easy";
 
-// const renderQuestions = () => {
 
-//     if (window.location.href === "http://127.0.0.1:5500/assets/categs/geo/easy/geo_easy.html") {
-//       for(let i =0; i< data.geography.easy.length; i++){
+  } else if (window.location.href.includes("geo_mid")) {
+    for (let i = 0; i < data.geography.medium.length; i++) {
+      questions.forEach((question, index) => {
+        question.textContent = data.geography.medium[index].question;
+      });
 
-//       }
-//     }
+      cardTitles.forEach((title, index) => {
+        title.textContent = data.geography.medium[i].options[index];
+      });
+    }
 
-// };
+    currentCategory = "geography"; 
+    currentDifficulty = "medium";
 
-// const render = ()=>{
-//   renderQuestions();
-// }
+
+  } else if (window.location.href.includes("geo_hard")) {
+    for (let i = 0; i < data.geography.hard.length; i++) {
+      questions.forEach((question, index) => {
+        question.textContent = data.geography.hard[index].question;
+      });
+
+      cardTitles.forEach((title, index) => {
+        title.textContent = data.geography.hard[i].options[index];
+      });
+    }
+
+    currentCategory = "geography"; 
+    currentDifficulty = "hard";
+
+
+  }
+};
+renderQuestions();
+
+const checkCorrectChoice = (event) => {
+  const playerChoice = event.target.closest(".card-body").querySelector(".card-title").textContent; 
+  const questionText = document.querySelector(".question").textContent; 
+  const correctChoice = data[currentCategory][currentDifficulty].find(q => q.question === questionText).answer;
+  
+  if (playerChoice === correctChoice) {
+    console.log("Correct!");    
+  } else {
+    console.log("Incorrect :(");    
+  }
+};
+
 /*----------- Event Listeners ----------*/
-// const handlePlayerChoice = () => {
-//   render();
+const handlePlayerChoice = (event) => {
+  checkCorrectChoice(event);
+};
 
-// };
-
-// choices.forEach((element) => {
-//   element.addEventListener("click", () => {
-//     question.textContent = "Message Displayed !";
-
-//     if (element.classList.contains("btn")) {
-//       console.log("choice is clicked!");
-//     }
-//   });
-// });
-
-//Show the questions and their options based on the href of the page
+choices.forEach((element) => {
+  element.addEventListener("click", handlePlayerChoice);
+});
