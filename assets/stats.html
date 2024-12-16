@@ -15,10 +15,13 @@
     <section id="what_makes_us_unique" class="py-5">
         <div class="container">
             <h2 id="final-score" class="h1000 text-center pb-5 MostSellingH1 question">
-                Your Score is:
+                Your Scored:
             </h2>
             <h2 id="win-or-lose" class="h1000 text-center pb-5 MostSellingH1 question">
-                meow
+                You Lost/Win!
+            </h2>
+            <h2 id="points" class="h1000 text-center pb-5 MostSellingH1 question">
+                You Lost/Win!
             </h2>
         </div>
     </section>
@@ -26,11 +29,16 @@
     <script>
         const finalScoreEl = document.querySelector("#final-score");
         const winLoseEl = document.querySelector("#win-or-lose");
+        const pointsEl = document.querySelector("#points");
+
+
         const playerScore = localStorage.getItem('quiz_score');
         const diffculty = localStorage.getItem('diff');
+        const correctCount = localStorage.getItem('correctCount');
 
 
-        finalScoreEl.textContent = `Your Score is: ${playerScore}`
+
+        finalScoreEl.textContent = `You Got ${correctCount}/10`
 
 
         if (diffculty === "easy" && (playerScore < 5)) {
@@ -58,6 +66,9 @@
             winLoseEl.textContent = 'You Won! Congrats!'
 
         }
+
+
+        pointsEl.textContent = `Points: ${playerScore}`
 
 
     </script>
