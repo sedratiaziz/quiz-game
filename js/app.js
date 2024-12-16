@@ -222,18 +222,18 @@ const checkCorrectChoice = (event) => {
   
   if (playerChoice === correctChoice && window.location.href.includes("geo_easy")) {
     score += 1;
-    console.log("Correct!"+" score: " + score);         
+    alert("Correct! \n\n +1 Point");         
 
   } else if (playerChoice === correctChoice && window.location.href.includes("geo_mid")) {
     score += 3;
-    console.log("Correct!"+" score: " + score);
+    alert("Correct! \n\n +3 Point");         
 
   } else if (playerChoice === correctChoice && window.location.href.includes("geo_hard")) {
     score += 5;
-    console.log("Correct!"+" score: " + score);
+    alert("Correct! \n\n +5 Point");         
     
   } else {
-    console.log("InCorrect! :( "+" score: "+score)
+    alert("Incorrect :(");         
   }
   
   currentQuestionIndex++;
