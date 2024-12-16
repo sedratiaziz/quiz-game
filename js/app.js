@@ -140,6 +140,7 @@ let message;
 let correctChoice;
 let currentCategory; 
 let currentDifficulty;
+let currentQuestionIndex;
 
 
 /*----- Cached Element References  -----*/
@@ -153,77 +154,126 @@ const init = () => {
   score = 0;
   message = "";
   correctChoice = 10;
+  currentQuestionIndex = 0;
 };
 init();
 
 const renderQuestions = () => {
   
-  
   //Geology Questions
   if (window.location.href.includes("geo_easy")) {
-    for (let i = 0; i < data.geography.easy.length; i++) {
+
       questions.forEach((question, index) => {
         question.textContent = data.geography.easy[index].question;
-      });
+  
 
-      cardTitles.forEach((title, index) => {
-        title.textContent = data.geography.easy[i].options[index];
+        const choices = data.geography.easy[index].options;
+        cardTitles.forEach((title, choiceIndex) => {
+        title.textContent = choices[choiceIndex];
+  
       });
-    }
+    });
 
     currentCategory = "geography"; 
     currentDifficulty = "easy";
 
 
   } else if (window.location.href.includes("geo_mid")) {
-    for (let i = 0; i < data.geography.medium.length; i++) {
-      questions.forEach((question, index) => {
-        question.textContent = data.geography.medium[index].question;
-      });
+    
+    questions.forEach((question, index) => {
+      question.textContent = data.geography.medium[index].question;
 
-      cardTitles.forEach((title, index) => {
-        title.textContent = data.geography.medium[i].options[index];
-      });
-    }
+
+      const choices = data.geography.medium[index].options;
+      cardTitles.forEach((title, choiceIndex) => {
+      title.textContent = choices[choiceIndex];
+
+    });
+  });
 
     currentCategory = "geography"; 
     currentDifficulty = "medium";
 
 
   } else if (window.location.href.includes("geo_hard")) {
-    for (let i = 0; i < data.geography.hard.length; i++) {
-      questions.forEach((question, index) => {
-        question.textContent = data.geography.hard[index].question;
-      });
+    questions.forEach((question, index) => {
+      question.textContent = data.geography.hard[index].question;
 
-      cardTitles.forEach((title, index) => {
-        title.textContent = data.geography.hard[i].options[index];
-      });
-    }
+
+      const choices = data.geography.hard[index].options;
+      cardTitles.forEach((title, choiceIndex) => {
+      title.textContent = choices[choiceIndex];
+
+    });
+  });
 
     currentCategory = "geography"; 
     currentDifficulty = "hard";
 
-
   }
 };
 renderQuestions();
+
 
 const checkCorrectChoice = (event) => {
   const playerChoice = event.target.closest(".card-body").querySelector(".card-title").textContent; 
   const questionText = document.querySelector(".question").textContent; 
   const correctChoice = data[currentCategory][currentDifficulty].find(q => q.question === questionText).answer;
   
-  if (playerChoice === correctChoice) {
-    console.log("Correct!");    
+  if (playerChoice === correctChoice && window.location.href.includes("geo_easy")) {
+    score += 1;
+    console.log("Correct!"+" score: " + score);         
+
+  } else if (playerChoice === correctChoice && window.location.href.includes("geo_mid")) {
+    score += 3;
+    console.log("Correct!"+" score: " + score);
+
+  } else if (playerChoice === correctChoice && window.location.href.includes("geo_hard")) {
+    score += 5;
+    console.log("Correct!"+" score: " + score);
+    
   } else {
-    console.log("Incorrect :(");    
+    console.log("InCorrect! :( "+" score: "+score)
   }
+  
+  currentQuestionIndex++;
+
 };
+
+
+const updateQuestions = ()=>{
+
+    const numOfQuestions = data[currentCategory][currentDifficulty].length;
+    if (currentQuestionIndex >= numOfQuestions) {    
+      stopQuestions();
+      return;
+    }
+
+
+    const currentQuestion = data[currentCategory][currentDifficulty][currentQuestionIndex];
+    questions.forEach((question)=>{
+      question.textContent = data[currentCategory][currentDifficulty][currentQuestionIndex].question
+    })
+
+    cardTitles.forEach((cardTitle, index) => {
+      cardTitle.textContent = currentQuestion.options[index];
+    });
+
+
+}
+
+const stopQuestions = ()=>{
+  alert('quiz ended!')
+
+  localStorage.setItem('quizScore', score)
+
+  window.location.href = `${window.location.origin}/assets/stats.html`
+}
 
 /*----------- Event Listeners ----------*/
 const handlePlayerChoice = (event) => {
   checkCorrectChoice(event);
+  updateQuestions();
 };
 
 choices.forEach((element) => {
