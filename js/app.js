@@ -535,8 +535,8 @@ const data = {
 /*-------------- Constants -------------*/
 const audioFiles = {
   correct: new Audio(`${window.location}assets/audio/correct-sound.mp3`),
-  incorrect: new Audio(`${window.location}assets/audio/incorrect-sound.mp3`),
-  gamestart: new Audio(`${window.location}assets/audio/game-start.mp3`),
+  incorrect: new Audio(`${window.location}quiz-game/assets/audio/incorrect-sound.mp3`),
+  gamestart: new Audio(`${window.location}quiz-game/assets/audio/game-start.mp3`),
 };
 
 console.log(`${window.location}assets/audio/game-start.mp3`)
