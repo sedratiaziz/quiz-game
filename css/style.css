@@ -1378,3 +1378,14 @@
     border-radius: 15px;
     font-size: 1.125rem;
   }
+
+
+  .swal-icon--success__hide-corners {
+    background: none !important;
+    }
+    .swal-icon--success:before,
+    .swal-icon--success:after {
+    background: none !important;
+    }
+
+  

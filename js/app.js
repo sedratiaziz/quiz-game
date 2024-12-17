@@ -533,7 +533,21 @@ const data = {
 };
 
 /*-------------- Constants -------------*/
+const audioFiles = {
+  correct: new Audio('/assets/audio/correct-sound.mp3'),
+  incorrect: new Audio('/assets/audio/incorrect-sound.mp3'),
+  gamestart: new Audio('/assets/audio/game-start.mp3'),
+};
 
+const onePoint = document.createElement("span");
+    onePoint.innerHTML='+1pt';
+    
+const threePoint = document.createElement("span");
+    threePoint.innerHTML='+3pt';
+    
+const fivePoint = document.createElement("span");
+    fivePoint.innerHTML='+5pt';
+    
 /*---------- Variables (state) ---------*/
 let score;
 let grandScore;
@@ -544,6 +558,22 @@ let currentDifficulty;
 let currentQuestionIndex;
 let correctChoiceCount;
 
+
+
+const playAudio = (type)=>{
+  try {
+    
+    audioFiles[type].pause();
+    audioFiles[type].currentTime = 0;
+    
+    audioFiles[type].play().catch(error => {
+      console.error('Audio Playing runned through a failure: ', error);
+    });
+
+  } catch (error) {
+    console.error('Error occured while trying to play audio: ', error)
+  }
+}
 
 /*----- Cached Element References  -----*/
 
@@ -576,10 +606,12 @@ const renderQuestions = () => {
         const choices = data.geography.easy[index].options;
         cardTitles.forEach((title, choiceIndex) => {
         title.textContent = choices[choiceIndex];
-  
+          
       });
-    });
 
+      playAudio('gamestart')
+    });
+    
     currentCategory = "geography"; 
     currentDifficulty = "easy";
 
@@ -595,6 +627,7 @@ const renderQuestions = () => {
       title.textContent = choices[choiceIndex];
 
     });
+    playAudio('gamestart')
   });
 
     currentCategory = "geography"; 
@@ -611,6 +644,7 @@ const renderQuestions = () => {
       title.textContent = choices[choiceIndex];
 
     });
+    playAudio('gamestart')
   });
 
     currentCategory = "geography"; 
@@ -631,6 +665,7 @@ const renderQuestions = () => {
       title.textContent = choices[choiceIndex];
 
     });
+    playAudio('gamestart')
   });
 
     currentCategory = "tech"; 
@@ -647,6 +682,7 @@ const renderQuestions = () => {
       title.textContent = choices[choiceIndex];
 
     });
+    playAudio('gamestart')
   });
 
     currentCategory = "tech"; 
@@ -663,6 +699,7 @@ const renderQuestions = () => {
       title.textContent = choices[choiceIndex];
 
     });
+    playAudio('gamestart')
   });
 
     currentCategory = "tech"; 
@@ -684,6 +721,7 @@ const renderQuestions = () => {
       title.textContent = choices[choiceIndex];
 
     });
+    playAudio('gamestart')
   });
 
     currentCategory = "science"; 
@@ -700,6 +738,7 @@ const renderQuestions = () => {
       title.textContent = choices[choiceIndex];
 
     });
+    playAudio('gamestart')
   });
 
     currentCategory = "science"; 
@@ -716,6 +755,7 @@ const renderQuestions = () => {
       title.textContent = choices[choiceIndex];
 
     });
+    playAudio('gamestart')
   });
 
     currentCategory = "science"; 
@@ -743,16 +783,18 @@ const checkCorrectChoice = (event) => {
   // ******* GEOGRAPHY  *********
   if (playerChoice === correctChoice && window.location.href.includes("geo_easy")) {
     score += 1;
-    alert("Correct! \n\n +1 Point");  
-           
+    playAudio('correct')
+    alertEasyCorrect();        
 
   } else if (playerChoice === correctChoice && window.location.href.includes("geo_mid")) {
     score += 3;
-    alert("Correct! \n\n +3 Point");         
+    playAudio('correct')
+    alertMediumCorrect();        
 
   } else if (playerChoice === correctChoice && window.location.href.includes("geo_hard")) {
     score += 5;
-    alert("Correct! \n\n +5 Point");         
+    playAudio('correct')
+    alertHardCorrect();    
     
   } 
   
@@ -760,37 +802,43 @@ const checkCorrectChoice = (event) => {
   // ******* TECH  *********
   else if (playerChoice === correctChoice && window.location.href.includes("tech_easy")) {
     score += 1;
-    alert("Correct! \n\n +1 Point");         
-    
+    playAudio('correct')       
+    alertEasyCorrect();
   } else if (playerChoice === correctChoice && window.location.href.includes("tech_mid")) {
     score += 3;
-    alert("Correct! \n\n +3 Point");         
+    playAudio('correct')           
+    alertMediumCorrect();
     
   } else if (playerChoice === correctChoice && window.location.href.includes("tech_hard")) {
     score += 5;
-    alert("Correct! \n\n +5 Point");         
+    playAudio('correct')  
+    alertHardCorrect();      
     
   } 
   
   // ******* SCIENCE  *********
   else if (playerChoice === correctChoice && window.location.href.includes("sci_easy")) {
     score += 1;
-    alert("Correct! \n\n +1 Point");         
+    playAudio('correct')  
+    alertEasyCorrect();     
     
   } else if (playerChoice === correctChoice && window.location.href.includes("sci_mid")) {
     score += 3;
-    alert("Correct! \n\n +3 Point");         
+    playAudio('correct')  
+    alertMediumCorrect();         
     
   } else if (playerChoice === correctChoice && window.location.href.includes("sci_hard")) {
     score += 5;
-    alert("Correct! \n\n +5 Point");         
+    playAudio('correct')  
+    alertHardCorrect();      
     
   }  
   
 
 
   else {
-    alert("Incorrect :(");         
+    playAudio('incorrect')
+    alertInCorrect();      
   }
   
 
@@ -831,6 +879,50 @@ const updateQuestions = ()=>{
 
 }
 
+
+//Sweet Alert
+
+const alertEasyCorrect = ()=>{
+  swal({      
+      title: "Correct!",
+      content: onePoint,
+      icon: "success",
+      button: "Next Question !",
+  });
+  } 
+const alertMediumCorrect = ()=>{
+  swal({      
+      title: "Correct!",
+      content: threePoint,
+      icon: "success",
+      button: "Next Question !",
+  });
+  } 
+const alertHardCorrect = ()=>{
+  swal({      
+      title: "Correct!",
+      content: fivePoint,
+      icon: "success",
+      button: "Next Question !",
+  });
+  } 
+const alertInCorrect = ()=>{
+  swal({      
+      title: "Incorrect!",          
+      icon: "error",
+      button: "Next Question !",
+  });
+  } 
+const alertQuizEnd = ()=>{
+  swal({      
+      title: "Quiz Ended!",          
+      icon: "warning",
+      button: "Show Results",
+  });
+  } 
+
+  
+
 const stopQuestions = ()=>{
   alert('quiz ended!')
 
@@ -842,10 +934,14 @@ const stopQuestions = ()=>{
 
 
 
+      
+
+    
+
 /*----------- Event Listeners ----------*/
 const handlePlayerChoice = (event) => {
   checkCorrectChoice(event);
-  updateQuestions();
+  updateQuestions();    
 };
 
 choices.forEach((element) => {
