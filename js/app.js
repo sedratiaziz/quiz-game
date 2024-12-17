@@ -539,7 +539,7 @@ const audioFiles = {
   gamestart: new Audio(`${window.location}quiz-game/assets/audio/game-start.mp3`),
 };
 
-console.log(`${window.location}assets/audio/game-start.mp3`)
+console.log(`${window.location.origin}quiz-game/assets/audio/game-start.mp3`)
 
 const onePoint = document.createElement("span");
     onePoint.innerHTML='+1pt';
