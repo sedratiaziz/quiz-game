@@ -9,7 +9,7 @@ A Science, Tech and Geography Quiz Game!
 
 ![Game Screenshot](./assets/img/screenshot.png)
 
-game link: [text](https://sedratiaziz.github.io/quiz-game/)
+game link: [Quizaria!](https://sedratiaziz.github.io/quiz-game/)
 
 
 
@@ -30,8 +30,8 @@ Pseudocode:
 - Sound files are handled using try-catch, in case the sound failed to play for any reason.
 
 Attributions:
-Bootstrap: [text](https://getbootstrap.com/)
-SweetAlert: [text](https://sweetalert.js.org/)
+Bootstrap: [Bootstrap](https://getbootstrap.com/)
+SweetAlert: [SweetAlert](https://sweetalert.js.org/)
 
 Technologies used:
 HTML5, CSS3, JavaScript, Bootstrap, SweetAlert
