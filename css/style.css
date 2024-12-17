@@ -1329,9 +1329,13 @@
   }
   
   .MostSellingH1 {
-    color: white;
-    font-family: 'ibmReg', sans-serif;
+    color: white;    
     font-size: 3.25rem;
+    font-weight: 700;
+  }
+  .MostSellingH5 {
+    color: white;
+    font-weight: 400;  
   }
   
   .hpro { 
