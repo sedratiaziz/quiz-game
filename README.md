@@ -30,8 +30,8 @@ Pseudocode:
 - Sound files are handled using try-catch, in case the sound failed to play for any reason.
 
 Attributions:
-Bootstrap: [Bootstrap](https://getbootstrap.com/)
-SweetAlert: [SweetAlert](https://sweetalert.js.org/)
+[Bootstrap](https://getbootstrap.com/)
+[SweetAlert](https://sweetalert.js.org/)
 
 Technologies used:
 HTML5, CSS3, JavaScript, Bootstrap, SweetAlert
