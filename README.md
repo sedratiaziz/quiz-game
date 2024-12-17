@@ -1,9 +1,18 @@
+
+
+
 Quizaria!
 A Science, Tech and Geography Quiz Game!
 
 
 
+
+![Game Screenshot](./assets/img/screenshot.png)
+
 game link: [text](https://sedratiaziz.github.io/quiz-game/)
+
+
+
 
 User stories:
 - The user is greeted with a welcome page, offering three categories: Geography, Tech or Science.
