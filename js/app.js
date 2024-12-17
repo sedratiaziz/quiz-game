@@ -539,9 +539,6 @@ const audioFiles = {
   gamestart: new Audio(`${window.location.origin}/quiz-game/assets/audio/game-start.mp3`),
 };
 
-console.log('this is version e')
-console.log(`${window.location.origin}quiz-game/assets/audio/game-start.mp3`)
-
 const onePoint = document.createElement("span");
     onePoint.innerHTML='+1pt';
     
@@ -886,6 +883,7 @@ const updateQuestions = ()=>{
 //Sweet Alert
 
 const alertEasyCorrect = ()=>{
+  
   swal({      
       title: "Correct!",
       content: onePoint,
