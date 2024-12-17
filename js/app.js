@@ -850,9 +850,6 @@ if (playerChoice === correctChoice) {
 localStorage.setItem('correctCount', correctChoiceCount)
 
   currentQuestionIndex++;
-//   grandScore = score;
-
-// console.log(grandScore)
 };
 
 
@@ -919,7 +916,6 @@ const alertInCorrect = ()=>{
   
 
 const stopQuestions = ()=>{
-  alert('quiz ended!')
 
   localStorage.setItem('quiz_score', score)
   localStorage.setItem('diff', currentDifficulty)
