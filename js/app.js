@@ -914,13 +914,7 @@ const alertInCorrect = ()=>{
       button: "Next Question !",
   });
   } 
-const alertQuizEnd = ()=>{
-  swal({      
-      title: "Quiz Ended!",          
-      icon: "warning",
-      button: "Show Results",
-  });
-  } 
+
 
   
 
