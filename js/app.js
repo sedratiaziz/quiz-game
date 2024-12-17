@@ -930,7 +930,7 @@ const stopQuestions = ()=>{
   localStorage.setItem('quiz_score', score)
   localStorage.setItem('diff', currentDifficulty)
 
-  window.location.href = `${window.location.origin}/assets/stats.html`  
+  window.location.href = `${window.location.origin}/quiz-game/assets/stats.html`  
 }
 
 
