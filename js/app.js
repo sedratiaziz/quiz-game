@@ -534,9 +534,9 @@ const data = {
 
 /*-------------- Constants -------------*/
 const audioFiles = {
-  correct: new Audio('/assets/audio/correct-sound.mp3'),
-  incorrect: new Audio('/assets/audio/incorrect-sound.mp3'),
-  gamestart: new Audio('/assets/audio/game-start.mp3'),
+  correct: new Audio(`${window.location.origin}/assets/audio/correct-sound.mp3`),
+  incorrect: new Audio(`${window.location.origin}/assets/audio/incorrect-sound.mp3`),
+  gamestart: new Audio(`${window.location.origin}/assets/audio/game-start.mp3`),
 };
 
 const onePoint = document.createElement("span");
