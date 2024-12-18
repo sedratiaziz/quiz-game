@@ -341,45 +341,45 @@ const data = {
         answer: "Mars",
       },
       {
-        question: "What planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"],
-        answer: "Mars",
-      },
-      {
-        question: "What planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"],
-        answer: "Mars",
-      },
-      {
-        question: "What planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"],
-        answer: "Mars",
-      },
-      {
-        question: "What planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"],
-        answer: "Mars",
-      },
-      {
-        question: "What planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"],
-        answer: "Mars",
-      },
-      {
-        question: "What planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"],
-        answer: "Mars",
-      },
-      {
-        question: "What planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"],
-        answer: "Mars",
-      },
-      {
-        question: "What planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"],
-        answer: "Mars",
-      },
+        question: "What is the boiling point of water in Celsius?",
+        options: ["50 degrees", "100 degrees", "75 degrees"],
+        answer: "100 degrees",
+        },
+        {
+        question: "Which of these is an example of a simple machine?",
+        options: ["Computer", "Lever", "Smartphone"],
+        answer: "Lever",
+        },
+        {
+        question: "What gas do plants absorb during photosynthesis?",
+        options: ["Oxygen", "Hydrogen", "Carbon Dioxide"],
+        answer: "Carbon Dioxide",
+        },
+        {
+        question: "What is the largest planet in our solar system?",
+        options: ["Saturn", "Jupiter", "Neptune"],
+        answer: "Jupiter",
+        },
+        {
+        question: "What is the process by which water changes from liquid to gas?",
+        options: ["Melting", "Freezing", "Evaporation"],
+        answer: "Evaporation",
+        },
+        {
+        question: "What is the closest star to Earth?",
+        options: ["Proxima Centauri", "The Sun", "Alpha Centauri"],
+        answer: "The Sun",
+        },
+        {
+        question: "What is the main function of the human heart?",
+        options: ["To digest food", "To pump blood", "To produce hormones"],
+        answer: "To pump blood",
+        },
+        {
+        question: "Which of these is NOT a state of matter?",
+        options: ["Solid", "Liquid", "Energy"],
+        answer: "Energy",
+        },
     ],
     medium: [
       {
@@ -393,45 +393,45 @@ const data = {
         answer: "Hydrogen",
       },
       {
-        question: "What element has the atomic number 1?",
-        options: ["Hydrogen", "Helium", "Carbon"],
-        answer: "Hydrogen",
-      },
-      {
-        question: "What element has the atomic number 1?",
-        options: ["Hydrogen", "Helium", "Carbon"],
-        answer: "Hydrogen",
-      },
-      {
-        question: "What element has the atomic number 1?",
-        options: ["Hydrogen", "Helium", "Carbon"],
-        answer: "Hydrogen",
-      },
-      {
-        question: "What element has the atomic number 1?",
-        options: ["Hydrogen", "Helium", "Carbon"],
-        answer: "Hydrogen",
-      },
-      {
-        question: "What element has the atomic number 1?",
-        options: ["Hydrogen", "Helium", "Carbon"],
-        answer: "Hydrogen",
-      },
-      {
-        question: "What element has the atomic number 1?",
-        options: ["Hydrogen", "Helium", "Carbon"],
-        answer: "Hydrogen",
-      },
-      {
-        question: "What element has the atomic number 1?",
-        options: ["Hydrogen", "Helium", "Carbon"],
-        answer: "Hydrogen",
-      },
-      {
-        question: "What element has the atomic number 1?",
-        options: ["Hydrogen", "Helium", "Carbon"],
-        answer: "Hydrogen",
-      },
+        question: "What is the process by which a star converts hydrogen into helium?",
+        options: ["Nuclear fission", "Nuclear fusion", "Chemical reaction"],
+        answer: "Nuclear fusion",
+        },
+        {
+        question: "Which part of the human brain is responsible for balance and coordination?",
+        options: ["Cerebrum", "Cerebellum", "Brain stem"],
+        answer: "Cerebellum",
+        },
+        {
+        question: "Why the human skin turns red after long exposure to the sun?",
+        options: ["Protection from cancer development", "Skin cells want to look cool", "Skin cells are shy"],
+        answer: "Protection from cancer development",
+        },
+        {
+        question: "What phenomenon causes the Earth's seasons?",
+        options: ["Distance from the Sun", "Earth's axial tilt", "Lunar cycles"],
+        answer: "Earth's axial tilt",
+        },
+        {
+        question: "What is the process of genetic material transfer between bacteria?",
+        options: ["Photosynthesis", "Conjugation", "Respiration"],
+        answer: "Conjugation",
+        },
+        {
+        question: "Which of these is considered a greenhouse gas?",
+        options: ["Nitrogen", "Carbon dioxide", "Oxygen"],
+        answer: "Carbon dioxide",
+        },
+        {
+        question: "What is the main function of RNA in a cell?",
+        options: ["Energy storage", "Genetic information transfer", "Protein synthesis"],
+        answer: "Protein synthesis",
+        },
+        {
+        question: "What is the primary method of heat transfer in the Earth's mantle?",
+        options: ["Conduction", "Radiation", "Convection"],
+        answer: "Convection",
+        },
     ],
     hard: [
       {
@@ -449,45 +449,45 @@ const data = {
         answer: "Fission",
       },
       {
-        question: "What is the term for the splitting of an atomic nucleus?",
-        options: ["Fusion", "Fission", "Radioactivity"],
-        answer: "Fission",
-      },
-      {
-        question: "What is the term for the splitting of an atomic nucleus?",
-        options: ["Fusion", "Fission", "Radioactivity"],
-        answer: "Fission",
-      },
-      {
-        question: "What is the term for the splitting of an atomic nucleus?",
-        options: ["Fusion", "Fission", "Radioactivity"],
-        answer: "Fission",
-      },
-      {
-        question: "What is the term for the splitting of an atomic nucleus?",
-        options: ["Fusion", "Fission", "Radioactivity"],
-        answer: "Fission",
-      },
-      {
-        question: "What is the term for the splitting of an atomic nucleus?",
-        options: ["Fusion", "Fission", "Radioactivity"],
-        answer: "Fission",
-      },
-      {
-        question: "What is the term for the splitting of an atomic nucleus?",
-        options: ["Fusion", "Fission", "Radioactivity"],
-        answer: "Fission",
-      },
-      {
-        question: "What is the term for the splitting of an atomic nucleus?",
-        options: ["Fusion", "Fission", "Radioactivity"],
-        answer: "Fission",
-      },
-      {
-        question: "What is the term for the splitting of an atomic nucleus?",
-        options: ["Fusion", "Fission", "Radioactivity"],
-        answer: "Fission",
-      },
+        question: "What is the proposed mechanism behind quantum entanglement in particle physics?",
+        options: ["Quantum decoherence", "Non-local hidden variable theory", "Quantum superposition"],
+        answer: "Non-local hidden variable theory",
+        },
+        {
+        question: "What describes the quantum mechanical phenomenon where particles can tunnel through potential barriers?",
+        options: ["Wave-particle duality", "Quantum tunneling effect", "Heisenberg uncertainty principle"],
+        answer: "Quantum tunneling effect",
+        },
+        {
+        question: "What is the primary challenge in developing a unified theory of quantum mechanics and general relativity?",
+        options: ["Incompatible mathematical frameworks", "Quantum gravity problem", "Measurement inconsistencies"],
+        answer: "Quantum gravity problem",
+        },
+        {
+        question: "Which neurological process is believed to be fundamental in forming long-term memories?",
+        options: ["Synaptic plasticity", "Neural network reconfiguration", "Protein synthesis"],
+        answer: "Synaptic plasticity",
+        },
+        {
+        question: "What mechanism explains the origin of chirality in biological molecules?",
+        options: ["Spontaneous molecular symmetry breaking", "Quantum spin effects", "Thermodynamic equilibrium"],
+        answer: "Spontaneous molecular symmetry breaking",
+        },
+        {
+        question: "What is the proposed explanation for dark matter's gravitational effects?",
+        options: ["Weakly interacting massive particles", "Modified gravitational theories", "Quantum field fluctuations"],
+        answer: "Weakly interacting massive particles",
+        },
+        {
+        question: "What describes the complex interactions between genetic and environmental factors in trait expression?",
+        options: ["Epigenetic inheritance", "Gene-environment interaction", "Phenotypic plasticity"],
+        answer: "Gene-environment interaction",
+        },
+        {
+        question: "What theoretical concept explains the potential multiverse in cosmological models?",
+        options: ["Inflationary universe theory", "Quantum multiverse hypothesis", "String theory landscape"],
+        answer: "String theory landscape",
+        },
     ],
   },
 };
