@@ -16,45 +16,45 @@ const data = {
         answer: "Apple",
       },
       {
-        question: "Which company created the iPhone?",
-        options: ["Apple", "Microsoft", "Google"],
-        answer: "Apple",
-      },
-      {
-        question: "Which company created the iPhone?",
-        options: ["Apple", "Microsoft", "Google"],
-        answer: "Apple",
-      },
-      {
-        question: "Which company created the iPhone?",
-        options: ["Apple", "Microsoft", "Google"],
-        answer: "Apple",
-      },
-      {
-        question: "Which company created the iPhone?",
-        options: ["Apple", "Microsoft", "Google"],
-        answer: "Apple",
-      },
-      {
-        question: "Which company created the iPhone?",
-        options: ["Apple", "Microsoft", "Google"],
-        answer: "Apple",
-      },
-      {
-        question: "Which company created the iPhone?",
-        options: ["Apple", "Microsoft", "Google"],
-        answer: "Apple",
-      },
-      {
-        question: "Which company created the iPhone?",
-        options: ["Apple", "Microsoft", "Google"],
-        answer: "Apple",
-      },
-      {
-        question: "Which company created the iPhone?",
-        options: ["Apple", "Microsoft", "Google"],
-        answer: "Apple",
-      },
+        question: "What does CPU stand for?",
+        options: ["Central Processing Unit", "Computer Personal Utility", "Central Program Utility"],
+        answer: "Central Processing Unit",
+        },
+        {
+        question: "Which of these is NOT a web browser?",
+        options: ["Chrome", "Excel", "Firefox"],
+        answer: "Excel",
+        },
+        {
+        question: "What does WiFi allow you to do?",
+        options: ["Connect to the internet wirelessly", "Cook food", "Print documents"],
+        answer: "Connect to the internet wirelessly",
+        },
+        {
+        question: "What is the primary function of a firewall?",
+        options: ["Protect a computer network from unauthorized access", "Start a computer", "Create documents"],
+        answer: "Protect a computer network from unauthorized access",
+        },
+        {
+        question: "USB stands for:",
+        options: ["Universal Serial Bus", "United System Bridge", "Universal System Bridge"],
+        answer: "Universal Serial Bus",
+        },
+        {
+        question: "Which company developed the Android operating system?",
+        options: ["Google", "Microsoft", "Apple"],
+        answer: "Google",
+        },
+        {
+        question: "What does RAM mean?",
+        options: ["Random Access Memory", "Read Advanced Memory", "Random Advanced Measurement"],
+        answer: "Random Access Memory",
+        },
+        {
+        question: "Which of these is a programming language?",
+        options: ["Python", "Instagram", "Spotify"],
+        answer: "Python",
+        },        
     ],
     medium: [
       {
@@ -69,53 +69,45 @@ const data = {
         answer: "Java",
       },
       {
-        question:
-          "What is the main programming language used for Android development?",
-        options: ["Java", "Swift", "C#"],
-        answer: "Java",
-      },
-      {
-        question:
-          "What is the main programming language used for Android development?",
-        options: ["Java", "Swift", "C#"],
-        answer: "Java",
-      },
-      {
-        question:
-          "What is the main programming language used for Android development?",
-        options: ["Java", "Swift", "C#"],
-        answer: "Java",
-      },
-      {
-        question:
-          "What is the main programming language used for Android development?",
-        options: ["Java", "Swift", "C#"],
-        answer: "Java",
-      },
-      {
-        question:
-          "What is the main programming language used for Android development?",
-        options: ["Java", "Swift", "C#"],
-        answer: "Java",
-      },
-      {
-        question:
-          "What is the main programming language used for Android development?",
-        options: ["Java", "Swift", "C#"],
-        answer: "Java",
-      },
-      {
-        question:
-          "What is the main programming language used for Android development?",
-        options: ["Java", "Swift", "C#"],
-        answer: "Java",
-      },
-      {
-        question:
-          "What is the main programming language used for Android development?",
-        options: ["Java", "Swift", "C#"],
-        answer: "Java",
-      },
+        question: "What is the primary purpose of a VPN?",
+        options: ["To increase computer processing speed", "To encrypt network traffic and provide online privacy", "To store backup files"],
+        answer: "To encrypt network traffic and provide online privacy",
+        },
+        {
+        question: "Which protocol is typically used for secure web browsing?",
+        options: ["FTP", "SMTP", "HTTPS"],
+        answer: "HTTPS",
+        },
+        {
+        question: "What does the term 'cloud computing' primarily refer to?",
+        options: ["Weather prediction technology", "Delivering computing services over the internet", "A type of computer hardware"],
+        answer: "Delivering computing services over the internet",
+        },
+        {
+        question: "What is a distributed ledger technology used by many cryptocurrencies?",
+        options: ["XML", "HTTP", "Blockchain"],
+        answer: "Blockchain",
+        },
+        {
+        question: "Which programming paradigm focuses on objects that contain data and code?",
+        options: ["Procedural Programming", "Object-Oriented Programming", "Functional Programming"],
+        answer: "Object-Oriented Programming",
+        },
+        {
+        question: "What does the term 'API' stand for in software development?",
+        options: ["Advanced Program Integration", "Application Programming Interface", "Automated Programming Instruction"],
+        answer: "Application Programming Interface",
+        },
+        {
+        question: "Which cybersecurity technique creates a copy of sensitive data in a separate location?",
+        options: ["Encryption", "Data Mirroring", "Firewall"],
+        answer: "Data Mirroring",
+        },
+        {
+        question: "What is the primary function of a 'cache' in computing?",
+        options: ["To permanently delete old files", "To store temporary data for quick retrieval", "To compress large files"],
+        answer: "To store temporary data for quick retrieval",
+        },
     ],
     hard: [
       {
@@ -137,77 +129,45 @@ const data = {
         answer: "Transmission Control Protocol",
       },
       {
-        question: "In computer networks, what does TCP stand for?",
-        options: [
-          "Transfer Control Protocol",
-          "Transmission Control Protocol",
-          "Telecommunication Protocol",
-        ],
-        answer: "Transmission Control Protocol",
-      },
-      {
-        question: "In computer networks, what does TCP stand for?",
-        options: [
-          "Transfer Control Protocol",
-          "Transmission Control Protocol",
-          "Telecommunication Protocol",
-        ],
-        answer: "Transmission Control Protocol",
-      },
-      {
-        question: "In computer networks, what does TCP stand for?",
-        options: [
-          "Transfer Control Protocol",
-          "Transmission Control Protocol",
-          "Telecommunication Protocol",
-        ],
-        answer: "Transmission Control Protocol",
-      },
-      {
-        question: "In computer networks, what does TCP stand for?",
-        options: [
-          "Transfer Control Protocol",
-          "Transmission Control Protocol",
-          "Telecommunication Protocol",
-        ],
-        answer: "Transmission Control Protocol",
-      },
-      {
-        question: "In computer networks, what does TCP stand for?",
-        options: [
-          "Transfer Control Protocol",
-          "Transmission Control Protocol",
-          "Telecommunication Protocol",
-        ],
-        answer: "Transmission Control Protocol",
-      },
-      {
-        question: "In computer networks, what does TCP stand for?",
-        options: [
-          "Transfer Control Protocol",
-          "Transmission Control Protocol",
-          "Telecommunication Protocol",
-        ],
-        answer: "Transmission Control Protocol",
-      },
-      {
-        question: "In computer networks, what does TCP stand for?",
-        options: [
-          "Transfer Control Protocol",
-          "Transmission Control Protocol",
-          "Telecommunication Protocol",
-        ],
-        answer: "Transmission Control Protocol",
-      },
-      {
-        question: "In computer networks, what does TCP stand for?",
-        options: [
-          "Transfer Control Protocol",
-          "Transmission Control Protocol",
-          "Telecommunication Protocol",
-        ],
-        answer: "Transmission Control Protocol",
-      },
+        question: "What is the primary difference between symmetric and asymmetric encryption?",
+        options: ["Processing speed", "Key management approach", "Encryption algorithm complexity"],
+        answer: "Key management approach",
+        },
+        {
+        question: "In machine learning, what does the term 'vanishing gradient problem' primarily describe?",
+        options: ["A data storage issue", "Challenges in training deep neural networks", "Memory allocation error"],
+        answer: "Challenges in training deep neural networks",
+        },
+        {
+        question: "What is the fundamental concept behind quantum computing's computational advantage?",
+        options: ["Parallel processing", "Superposition and quantum entanglement", "Advanced cooling techniques"],
+        answer: "Superposition and quantum entanglement",
+        },
+        {
+        question: "Which networking concept describes the technique of splitting network traffic across multiple paths?",
+        options: ["Load balancing", "Network segmentation", "Packet switching"],
+        answer: "Load balancing",
+        },
+        {
+        question: "What does the CAP theorem state about distributed computer systems?",
+        options: ["Network scalability limitations", "Impossibility of simultaneously guaranteeing consistency, availability, and partition tolerance", "Data replication strategies"],
+        answer: "Impossibility of simultaneously guaranteeing consistency, availability, and partition tolerance",
+        },
+        {
+        question: "In cryptography, what is a zero-knowledge proof?",
+        options: ["A method to prove knowledge without revealing the actual information", "An encryption technique", "A data verification process"],
+        answer: "A method to prove knowledge without revealing the actual information",
+        },
+        {
+        question: "What does the term 'microservices architecture' primarily refer to?",
+        options: ["Miniature server design", "Developing software as a collection of small, independent services", "Microscopic computing components"],
+        answer: "Developing software as a collection of small, independent services",
+        },
+        {
+        question: "What is the primary challenge in implementing homomorphic encryption?",
+        options: ["High computational complexity", "Limited cryptographic algorithms", "Network bandwidth constraints"],
+        answer: "High computational complexity",
+        },
     ],
   },
   geography: {
